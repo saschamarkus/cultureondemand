@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cultureondemand</title>
+    <style>
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: auto;
+            height: auto;
+            padding: 10px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div id="card-container"></div>
+<svg width="1200" height="600">
+    <g></g>
+</svg>
+
+<!-- @todo: Include minified version for production. -->
+<script src="vendor/d3js/d3.js"></script>
+<script src="js/terrain.js"></script>
+</body>
+</html>

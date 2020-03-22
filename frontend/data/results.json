@@ -1,0 +1,41 @@
+[
+  {
+    "duration": 2,
+    "paid_content": false,
+    "interactivity": 2,
+    "user": "admin",
+    "id": 1,
+    "title": "B\u00fcgeln mit Sascha",
+    "experience": "Haushaltsger\u00e4te",
+    "media": "twitch",
+    "emotion": "BAD:Gelangweilt",
+    "x": 700,
+    "y": 10
+  },
+  {
+    "duration": 3,
+    "paid_content": false,
+    "interactivity": 4,
+    "user": "admin",
+    "id": 2,
+    "title": "Wie war Dein Tag?",
+    "experience": "Talk",
+    "media": "zoom,hangout",
+    "emotion": "HAPPY:Vertrauensvoll",
+    "x": 500,
+    "y": 400
+  },
+  {
+    "duration": 3,
+    "paid_content": false,
+    "interactivity": 4,
+    "user": "admin",
+    "id": 3,
+    "title": "Schrei alles raus",
+    "experience": "Personal teaching/coaching",
+    "media": "zoom,hangout,youtube",
+    "emotion": "W\u00dcTEND",
+    "x": 330,
+    "y": 120
+  }
+]
