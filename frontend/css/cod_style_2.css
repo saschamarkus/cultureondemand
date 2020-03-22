@@ -1,0 +1,63 @@
+* {
+    font-family: Menlo, monospace;
+}
+
+.head {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.moodscape {
+    position: fixed;
+    bottom: -160px;
+    left: 0px;
+}
+
+/* FILTER */
+
+
+.filterDiv {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    display: none;
+}
+
+.filterDiv:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.show {
+    display: block;
+}
+
+.container {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.filterListe {
+    margin-top: 1rem;
+    float: right;
+    text-align: right;
+}
+
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    background-color: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.btn:hover {
+    background-color: none;
+    color: fuchsia;
+}
+
+.btn.active {
+    background-color: none;
+    color: #dc3545;
+}

@@ -1,16 +1,29 @@
-<!doctype html>
-<html lang="de">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>cultureondemand</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/cod_style_2.css" rel="stylesheet">
+
+    <title>culture on demand</title>
     <style>
         svg {
             display: block;
             margin: 0 auto;
+            top: 250px;
+            z-index: 0;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
         }
+
+        .filterDiv {
+            z-index: 1;
+        }
+
         div.tooltip {
             position: absolute;
             text-align: center;
@@ -26,12 +39,282 @@
     </style>
 </head>
 <body>
-<div id="card-container"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-8">
+            <div class="col-md-5">
+                <img src="media/moodscape_logo.svg" class="head">
+            </div>
+
+            <p>
+                Auf unserer Plattform finden Menschen eine stimmungsvolle Kulturlandschaft. Durch den direkten Austausch
+                zwischen KünstlerInnen & NutzerInnen entstehen neue, von Emotionen inspirierte Kulturangebote.
+            </p>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+            <div class="filterListe">
+                <div id="filterContainer">
+                    <button class="btn active" onclick="selectFilter('all')"> Show all</button>
+                    <br/>
+                    <button class="btn" onclick="selectFilter('event')"> Event</button>
+                    <button class="btn" onclick="selectFilter('demand')"> Demand</button>
+                    <br/>
+
+                    <button class="btn" onclick="selectFilter('ueberrauscht')">Überrascht</button>
+                    <button class="btn" onclick="selectFilter('gluecklich')">Glücklich</button>
+                    <button class="btn" onclick="selectFilter('traurig')">Traurig</button>
+                    <button class="btn" onclick="selectFilter('angewidert')">Angewidert</button>
+                    <button class="btn" onclick="selectFilter('wuetend')">Wütend</button>
+                    <button class="btn" onclick="selectFilter('aengstlich')">Ängstlich</button>
+                    <button class="btn" onclick="selectFilter('schlecht')">Schlecht</button>
+                    <br/>
+
+                    <button class="btn" onclick="selectFilter('activ+')">sehr aktiv</button>
+                    <button class="btn" onclick="selectFilter('aktiv')">aktiv</button>
+                    <button class="btn" onclick="selectFilter('moderat')">etwas aktiv</button>
+                    <button class="btn" onclick="selectFilter('passiv')">wenig Aktiv</button>
+                    <button class="btn" onclick="selectFilter('passiv+')">gar nicht aktiv</button>
+                    <br/>
+
+                    <button class="btn" onclick="selectFilter('5')">unter 5 min</button>
+                    <button class="btn" onclick="selectFilter('15')">15 - 30 min</button>
+                    <button class="btn" onclick="selectFilter('30')">30 - 45 min</button>
+                    <button class="btn" onclick="selectFilter('40')">45 - 60 min</button>
+                    <button class="btn" onclick="selectFilter('60')">über 60 min</button>
+                    <br/>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+
+            <!-- EVENT/DEMAND -->
+
+            <div class="row">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+            </div>
+
+            <img src="media/empty.png">
+                <img src="media/empty.png">
+
+                <div class="filterDiv event ueberrascht activ+ 15">
+                    <img src="media/event_activ+.png">
+                </div>
+
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+
+            </div>
+
+            <div class="row">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <div class="filterDiv event traurig moderat 15">
+                    <img src="media/event_moderat.png">
+                </div>
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+            </div>
+
+            <div class="row">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+
+                <div class="filterDiv demand traurig activ 40">
+                    <img src="media/demand_activ.png">
+                </div>
+
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <div class="filterDiv event traurig activ 40">
+                    <img src="media/event_activ.png">
+                </div>
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+            </div>
+
+            <div class="row">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <div class="filterDiv event ueberrascht activ+ 15">
+                    <img src="media/event_activ+.png">
+                </div>
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <div class="filterDiv event ueberrascht passiv+ 15">
+                    <img src="media/event_passiv+.png">
+                </div>
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+            </div>
+
+            <div class="row">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <div class="filterDiv event traurig passiv 15">
+                    <img src="media/event_passiv.png">
+                </div>
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <div class="filterDiv demand traurig activ 40">
+                    <img src="media/demand_activ.png">
+                </div>
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <div class="filterDiv event traurig moderat 60">
+                    <img src="media/event_moderat.png">
+                </div>
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+                <img src="media/empty.png">
+            </div>
+
+            <div class="filterDiv demand gluecklich activ+ 30">
+                <img src="media/demand_activ+.png">
+            </div>
+
+            <div class="filterDiv demand gluecklich activ 30">
+                <img src="media/demand_activ.png">
+            </div>
+
+
+            <div class="filterDiv event traurig passiv+ 60">
+                <img src="media/event_activ+.png">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 <svg width="1200" height="600">
     <g></g>
 </svg>
 
-<!-- @todo: Include minified version for production. -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+
+    selectFilter("all")
+
+    function selectFilter(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c === "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+        }
+    }
+
+    function AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) === -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+    function RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("filterContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+</script>
 <script src="vendor/d3js/d3.js"></script>
 <script src="js/terrain.js"></script>
 </body>

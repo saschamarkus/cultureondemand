@@ -2,7 +2,7 @@ console.info('Welcome to Culture On Demand.');
 console.info('=============================');
 
 const width = 600;
-const yScale = d3.scaleLinear().domain([0, 1200]).range([600, 0]);
+    const yScale = d3.scaleLinear().domain([0, 1200]).range([600, 0]);
 
 let m = 11;
 
