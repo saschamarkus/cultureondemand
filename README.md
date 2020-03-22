@@ -6,12 +6,16 @@ Das Backend bietet eine einfache REST-API zum Abfragen von Angeboten (offers) ht
 ### Installation
 Einrichten des virtuellen Enviroments
 `python3 -m venv venv-backend`
+
 `source venv-backend/bin/activate`
+
 `pip install -r requirements.txt`
+
 `pip install -e .`
 
 ### Initiallisieren des Systems
 `cultureondemand db upgrade`
+
 `cultureondemand init`
 
 ### Starten des Servers
