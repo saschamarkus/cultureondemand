@@ -12,7 +12,7 @@ Einrichten des virtuellen Enviroments
 
 `pip install -r backend/requirements.txt`
 
-`pip install -e .`
+`pip install -e backend/`
 
 ### Initiallisieren des Systems
 `cultureondemand db upgrade`
