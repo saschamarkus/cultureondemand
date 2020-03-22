@@ -10,7 +10,7 @@ Einrichten des virtuellen Enviroments
 
 `source venv-backend/bin/activate`
 
-`pip install -r requirements.txt`
+`pip install -r backend/requirements.txt`
 
 `pip install -e .`
 
