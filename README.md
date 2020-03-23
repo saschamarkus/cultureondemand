@@ -27,3 +27,10 @@ Einrichten des virtuellen Enviroments
 ### Aufräumen der DB
 `rm /tmp/cultureondemand.db`
 Und dann bei "Initialisieren des Systems" wieder beginnen.
+
+## Frontend
+`cd frontend`
+
+`python -m http.server 5001 --bind 127.0.0.1`
+
+Open http://127.0.0.1:5001/ with your browser

@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 
 from cultureondemand import auth, api
 from cultureondemand.extensions import db, jwt, migrate, apispec
@@ -9,6 +10,7 @@ def create_app(testing=False, cli=False):
     """
     app = Flask("cultureondemand")
     app.config.from_object("cultureondemand.config")
+    cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     if testing is True:
         app.config["TESTING"] = True

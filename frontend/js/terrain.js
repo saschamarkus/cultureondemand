@@ -82,7 +82,7 @@ let div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-d3.json('http://localhost:8888/data/results.json').then((data) => {
+d3.json('http://127.0.0.1:5000/api/v1/offers').then((data) => {
     console.info(data);
     let trianglePoints = [5, 30, 15, 10, 25, 30];
 
